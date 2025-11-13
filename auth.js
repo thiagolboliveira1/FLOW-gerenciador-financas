@@ -1,0 +1,1 @@
+export function login(){window.location='index.html'}; export function logout(){window.location='login.html'};
