@@ -1,1 +1,1 @@
-console.log('FLOW APP LOADED');
+console.log('FLOW loaded');
