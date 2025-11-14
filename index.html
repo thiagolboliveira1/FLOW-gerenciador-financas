@@ -1,1 +1,20 @@
-<html><head><link rel='stylesheet' href='styles.css'><script type='module' src='app.js'></script></head><body><h1>FLOW</h1><div id='cards'></div></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FLOW • Dashboard</title>
+<link rel="stylesheet" href="styles.css"></head>
+<body>
+  <div class="header">
+    <div class="app-title">FLOW</div>
+    <div class="controls">
+      <button id="newItem" class="btn primary">+ Novo item</button>
+      <button id="exportCSV" class="btn">Exportar CSV</button>
+      <button id="importCSV" class="btn">Importar CSV</button>
+      <button id="logoutBtn" class="btn positive">Sair</button>
+    </div>
+  </div>
+
+  <div id="summary" style="margin-top:18px"></div>
+  <div id="cards"></div>
+
+<script type="module" src="app.js"></script>
+</body></html>
