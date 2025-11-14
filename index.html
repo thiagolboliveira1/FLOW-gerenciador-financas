@@ -1,20 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FLOW • Dashboard</title>
-<link rel="stylesheet" href="styles.css"></head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>FLOW PRO • Dashboard</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
+
+  <!-- TOPO -->
   <div class="header">
-    <div class="app-title">FLOW</div>
+    <div class="app-title">FLOW PRO</div>
+
     <div class="controls">
-      <button id="newItem" class="btn primary">+ Novo item</button>
-      <button id="exportCSV" class="btn">Exportar CSV</button>
-      <button id="importCSV" class="btn">Importar CSV</button>
-      <button id="logoutBtn" class="btn positive">Sair</button>
+      <button id="newItem" class="btn primary">+ Novo</button>
+      <button id="exportCSV" class="btn">Exportar</button>
+      <button id="logoutBtn" class="btn">Sair</button>
     </div>
   </div>
 
-  <div id="summary" style="margin-top:18px"></div>
+  <!-- FILTROS -->
+  <div class="filter-row">
+    <label>Filtrar:
+      <select id="filterType">
+        <option value="all">Todos</option>
+        <option value="income">Renda</option>
+        <option value="fixed">Fixas</option>
+        <option value="variable">Variáveis</option>
+        <option value="goal">Metas</option>
+        <option value="cofrinho">Cofrinho</option>
+      </select>
+    </label>
+
+    <input id="search" placeholder="Buscar título..." class="input" style="width:280px">
+  </div>
+
+  <!-- RESUMO -->
+  <div class="summary" id="summary"></div>
+
+  <!-- ESTIMADOR -->
+  <div style="margin-top:12px; display:flex; gap:8px; align-items:center;">
+    <input id="investTotal" class="input" placeholder="Valor total para investir" style="width:220px">
+    <button id="estimateBtn" class="btn">Estimar alocação</button>
+  </div>
+
+  <!-- CARDS -->
   <div id="cards"></div>
 
-<script type="module" src="app.js"></script>
-</body></html>
+  <!-- JS PRINCIPAL -->
+  <script type="module" src="app_features.js"></script>
+
+</body>
+</html>
